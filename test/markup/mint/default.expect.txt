@@ -1,0 +1,34 @@
+<span class="hljs-comment">/* Records provide equality and serialization tools */</span>
+<span class="hljs-keyword">record</span> <span class="hljs-type">Lang</span> {
+  name : <span class="hljs-type">String</span>,
+  fans : <span class="hljs-type">Number</span> <span class="hljs-keyword">using</span> <span class="hljs-string">&quot;super_fans&quot;</span>
+}
+
+<span class="hljs-comment">/* Stores handle state and mutations */</span>
+<span class="hljs-keyword">store</span> <span class="hljs-type">Application</span> {
+  <span class="hljs-keyword">state</span> lang : <span class="hljs-type">Lang</span> = <span class="hljs-type">Lang</span>(<span class="hljs-string">&quot;Mint&quot;</span>, <span class="hljs-number">42</span>)
+  <span class="hljs-keyword">state</span> love : <span class="hljs-type">Number</span> = <span class="hljs-number">5</span>
+
+  <span class="hljs-keyword">fun</span> giveLove : <span class="hljs-type">Promise</span>(<span class="hljs-type">Never</span>, <span class="hljs-type">Void</span>) {
+    <span class="hljs-keyword">next</span> { love = love + <span class="hljs-number">1</span> }
+  }
+}
+
+<span class="hljs-comment">/* Components are dynamically styled and connect stores */</span>
+<span class="hljs-keyword">component</span> <span class="hljs-type">Main</span> {
+  <span class="hljs-keyword">connect</span> <span class="hljs-type">Application</span> <span class="hljs-keyword">exposing</span> { lang, love }
+
+  <span class="hljs-keyword">style</span> base {
+    <span class="hljs-string">display</span>: flex;
+
+    <span class="hljs-keyword">if</span> (love &gt; 5) {
+      <span class="hljs-string">color</span>: red;
+    }
+  }
+
+  <span class="hljs-keyword">fun</span> render : <span class="hljs-type">Html</span> {
+    <span class="hljs-tag">&lt;<span class="hljs-name">div::base</span>&gt;</span>
+      <span class="hljs-string">&quot;#{lang.name} has #{lang.fans} fans&quot;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  }
+}

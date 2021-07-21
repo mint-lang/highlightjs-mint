@@ -1,0 +1,39 @@
+{
+  "name": "highlightjs-mint",
+  "version": "0.1.0",
+  "description": "highlight.js syntax definition for the Mint programming language",
+  "keywords": [
+    "mint-lang",
+    "javascript",
+    "highlight.js",
+    "highlightjs",
+    "syntax"
+  ],
+  "author": "Szikszai Gusztáv",
+  "contributors": [
+    "Luke Pighetti",
+    "Sijawusz Pur Rahnama <sija@sija.pl>"
+  ],
+  "homepage": "https://github.com/Sija/highlightjs-mint",
+  "bugs": {
+    "url": "https://github.com/Sija/highlightjs-mint/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sija/highlightjs-mint.git"
+  },
+  "main": "src/languages/mint.js",
+  "type": "module",
+  "files": [
+    "src/languages/mint.js"
+  ],
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "highlight.js": "^11.1.0",
+    "mocha": "^9.0.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "license": "MIT"
+}
