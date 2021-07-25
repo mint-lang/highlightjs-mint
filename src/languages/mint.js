@@ -77,6 +77,7 @@ export default function (hljs) {
         begin: '"',
         end: '"',
         className: 'string',
+        contains: [hljs.BACKSLASH_ESCAPE],
       },
       {
         begin: '\\b[A-Z][A-Za-z0-9]+',
