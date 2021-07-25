@@ -10,11 +10,11 @@ export default function (hljs) {
   const MINT_CONTAINS = [];
 
   const MINT_KEYWORDS = [
-    'const', 'global', 'component', 'store', 'module', 'fun', 'state',
-    'property', 'next', 'if', 'else', 'sequence', 'parallel|10', 'style',
-    'record', 'connect', 'enum', 'routes', 'try', 'catch', 'case',
-    'where', 'when', 'use', 'for', 'of', 'true', 'false', 'then',
-    'finally', 'get', 'exposing|10', 'as', 'decode', 'encode', 'using|10'
+    'const', 'global', 'component', 'store', 'module', 'record', 'enum', 'style',
+    'routes', 'provider', 'suite', 'test', 'fun', 'get', 'property', 'state',
+    'next', 'try', 'sequence', 'parallel|10', 'if', 'else', 'catch', 'case',
+    'connect', 'where', 'when', 'then', 'finally', 'use', 'for', 'of', 'with',
+    'as', 'decode', 'encode', 'exposing|10', 'using|10', 'true', 'false',
   ];
 
   const TAG_INTERNALS = {
