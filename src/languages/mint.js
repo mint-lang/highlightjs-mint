@@ -43,20 +43,8 @@ export default function (hljs) {
             endsParent: true,
             contains: MINT_CONTAINS,
           },
-          {
-            className: 'string',
-            endsParent: true,
-            variants: [
-              {
-                begin: /"/,
-                end: /"/,
-              },
-              {
-                begin: /'/,
-                end: /'/,
-              },
-            ]
-          }
+          hljs.QUOTE_STRING_MODE,
+          hljs.APOS_STRING_MODE,
         ]
       }
     ]
