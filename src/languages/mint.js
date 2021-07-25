@@ -79,7 +79,7 @@ export default function (hljs) {
         contains: MINT_CONTAINS,
       },
       {
-        begin: '</?\\w+',
+        begin: '</?(?=\\w+)',
         end: '/?>',
         className: 'tag',
         contains: [
