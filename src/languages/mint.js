@@ -66,6 +66,7 @@ export default function (hljs) {
     ...[
       hljs.C_LINE_COMMENT_MODE,
       hljs.C_BLOCK_COMMENT_MODE,
+      hljs.REGEXP_MODE,
       {
         begin: '\\b\\d+(\\.\\d+)?',
         end: '\\B|\\b',
