@@ -1,12 +1,13 @@
 /* Records provide equality and serialization tools */
 record Lang {
   name : String,
-  fans : Number using "super_fans"
+  fans : Number using "super_fans",
+  isAwesome : Bool using "is_awesome"
 }
 
 /* Stores handle state and mutations */
 store Application {
-  state lang : Lang = Lang("Mint", 42)
+  state lang : Lang = Lang("Mint", 42, true)
   state love : Number = 5
 
   fun giveLove : Promise(Never, Void) {

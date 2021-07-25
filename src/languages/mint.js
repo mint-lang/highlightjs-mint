@@ -9,13 +9,18 @@ Website: https://www.mint-lang.com
 export default function (hljs) {
   const MINT_CONTAINS = [];
 
-  const MINT_KEYWORDS = [
-    'const', 'global', 'component', 'store', 'module', 'record', 'enum', 'style',
-    'routes', 'provider', 'suite', 'test', 'fun', 'get', 'property', 'state',
-    'next', 'try', 'sequence', 'parallel|10', 'if', 'else', 'catch', 'case',
-    'connect', 'where', 'when', 'then', 'finally', 'use', 'for', 'of', 'with',
-    'as', 'decode', 'encode', 'exposing|10', 'using|10', 'true', 'false',
-  ];
+  const MINT_KEYWORDS = {
+    keywords: {
+      keyword: [
+        'const', 'global', 'component', 'store', 'module', 'record', 'enum', 'style',
+        'routes', 'provider', 'suite', 'test', 'fun', 'get', 'property', 'state',
+        'next', 'try', 'sequence', 'parallel|10', 'if', 'else', 'catch', 'case',
+        'connect', 'where', 'when', 'then', 'finally', 'use', 'for', 'of', 'with',
+        'as', 'decode', 'encode', 'exposing|10', 'using|10',
+      ],
+      literal: ['true', 'false'],
+    }
+  }
 
   const TAG_INTERNALS = {
     illegal: /</,

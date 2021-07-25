@@ -1,12 +1,13 @@
 <span class="hljs-comment">/* Records provide equality and serialization tools */</span>
 <span class="hljs-keyword">record</span> <span class="hljs-type">Lang</span> {
   name : <span class="hljs-type">String</span>,
-  fans : <span class="hljs-type">Number</span> <span class="hljs-keyword">using</span> <span class="hljs-string">&quot;super_fans&quot;</span>
+  fans : <span class="hljs-type">Number</span> <span class="hljs-keyword">using</span> <span class="hljs-string">&quot;super_fans&quot;</span>,
+  isAwesome : <span class="hljs-type">Bool</span> <span class="hljs-keyword">using</span> <span class="hljs-string">&quot;is_awesome&quot;</span>
 }
 
 <span class="hljs-comment">/* Stores handle state and mutations */</span>
 <span class="hljs-keyword">store</span> <span class="hljs-type">Application</span> {
-  <span class="hljs-keyword">state</span> lang : <span class="hljs-type">Lang</span> = <span class="hljs-type">Lang</span>(<span class="hljs-string">&quot;Mint&quot;</span>, <span class="hljs-number">42</span>)
+  <span class="hljs-keyword">state</span> lang : <span class="hljs-type">Lang</span> = <span class="hljs-type">Lang</span>(<span class="hljs-string">&quot;Mint&quot;</span>, <span class="hljs-number">42</span>, <span class="hljs-literal">true</span>)
   <span class="hljs-keyword">state</span> love : <span class="hljs-type">Number</span> = <span class="hljs-number">5</span>
 
   <span class="hljs-keyword">fun</span> giveLove : <span class="hljs-type">Promise</span>(<span class="hljs-type">Never</span>, <span class="hljs-type">Void</span>) {
