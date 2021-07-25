@@ -68,6 +68,13 @@ export default function (hljs) {
         contains: [hljs.BACKSLASH_ESCAPE],
       },
       {
+        begin: '`',
+        end: '`',
+        subLanguage: 'javascript',
+        excludeBegin: true,
+        excludeEnd: true,
+      },
+      {
         begin: '\\b[A-Z][A-Za-z0-9]+',
         className: 'type',
         relevance: 0,

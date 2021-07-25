@@ -1,5 +1,5 @@
 import fs from "fs";
-import hljs from "highlight.js/lib/core";
+import hljs from "highlight.js/lib/common";
 import mint from "../src/languages/mint.js";
 import chai from "chai"
 
