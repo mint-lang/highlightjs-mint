@@ -29,7 +29,7 @@
   ],
   "devDependencies": {
     "chai": "^4.3.4",
-    "highlight.js": "^11.1.0",
+    "highlight.js": "^11.7.0",
     "mocha": "^9.2.2"
   },
   "scripts": {
