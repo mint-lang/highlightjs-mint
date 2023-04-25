@@ -14,13 +14,13 @@
     "Luke Pighetti",
     "Sijawusz Pur Rahnama <sija@sija.pl>"
   ],
-  "homepage": "https://github.com/Sija/highlightjs-mint",
+  "homepage": "https://github.com/mint-lang/highlightjs-mint",
   "bugs": {
-    "url": "https://github.com/Sija/highlightjs-mint/issues"
+    "url": "https://github.com/mint-lang/highlightjs-mint/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Sija/highlightjs-mint.git"
+    "url": "https://github.com/mint-lang/highlightjs-mint.git"
   },
   "main": "src/languages/mint.js",
   "type": "module",
