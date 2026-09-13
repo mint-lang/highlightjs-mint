@@ -10,18 +10,18 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v7
         with:
-          node-version: "14"
+          node-version: latest
 
       - name: Checkout highlight.js repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
         with:
           repository: highlightjs/highlight.js
           path: highlight.js
 
       - name: Checkout highlightjs-mint repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
         with:
           path: highlightjs-mint
 
