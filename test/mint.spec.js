@@ -1,9 +1,7 @@
 import fs from "fs";
 import hljs from "highlight.js/lib/common";
 import mint from "../src/languages/mint.js";
-import chai from "chai"
-
-const expect = chai.expect;
+import { expect } from "chai";
 
 hljs.registerLanguage("mint", mint);
 
