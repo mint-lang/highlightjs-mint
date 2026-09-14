@@ -9,7 +9,7 @@ describe("highlightjs-mint", () => {
   it("should detect correct language", () => {
     // Load the input file...
     const input = fs.readFileSync(
-      new URL("./detect/mint/default.txt", import.meta.url),
+      new URL("./detect/mint/default.mint", import.meta.url),
       "utf-8"
     );
 
@@ -20,7 +20,7 @@ describe("highlightjs-mint", () => {
   it("should generate correct markup", () => {
     // Load the input file...
     const input = fs.readFileSync(
-      new URL("./markup/mint/default.txt", import.meta.url),
+      new URL("./markup/mint/default.mint", import.meta.url),
       "utf-8"
     );
 
@@ -32,7 +32,7 @@ describe("highlightjs-mint", () => {
 
     // Check the output is what we expect...
     const expected = fs.readFileSync(
-      new URL("./markup/mint/default.expect.txt", import.meta.url),
+      new URL("./markup/mint/default.expect.html", import.meta.url),
       "utf-8"
     );
     expect(result).to.equal(expected);
